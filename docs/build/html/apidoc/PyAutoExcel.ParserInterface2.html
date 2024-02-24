@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyAutoExcel.ParserInterface2 package &mdash; PyAutoExcel  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            PyAutoExcel
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">PyAutoExcel.ParserInterface2 package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-PyAutoExcel.ParserInterface2.Field">PyAutoExcel.ParserInterface2.Field module</a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field"><code class="docutils literal notranslate"><span class="pre">Field</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field.get"><code class="docutils literal notranslate"><span class="pre">Field.get()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field.name"><code class="docutils literal notranslate"><span class="pre">Field.name</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field.set"><code class="docutils literal notranslate"><span class="pre">Field.set()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field.validator"><code class="docutils literal notranslate"><span class="pre">Field.validator</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field.value"><code class="docutils literal notranslate"><span class="pre">Field.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-PyAutoExcel.ParserInterface2.Parser">PyAutoExcel.ParserInterface2.Parser module</a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Parser.Parser"><code class="docutils literal notranslate"><span class="pre">Parser</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Parser.Parser.parse"><code class="docutils literal notranslate"><span class="pre">Parser.parse()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-PyAutoExcel.ParserInterface2.Validators">PyAutoExcel.ParserInterface2.Validators module</a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="docutils literal notranslate"><span class="pre">BaseValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator.validate"><code class="docutils literal notranslate"><span class="pre">BaseValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.ConcatValidator"><code class="docutils literal notranslate"><span class="pre">ConcatValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.ConcatValidator.validate"><code class="docutils literal notranslate"><span class="pre">ConcatValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.ContainsValidator"><code class="docutils literal notranslate"><span class="pre">ContainsValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.ContainsValidator.validate"><code class="docutils literal notranslate"><span class="pre">ContainsValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.CustomValidator"><code class="docutils literal notranslate"><span class="pre">CustomValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.CustomValidator.validate"><code class="docutils literal notranslate"><span class="pre">CustomValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.EmailValidator"><code class="docutils literal notranslate"><span class="pre">EmailValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.EmailValidator.validate"><code class="docutils literal notranslate"><span class="pre">EmailValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.MaxBoundaryValidator"><code class="docutils literal notranslate"><span class="pre">MaxBoundaryValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.MaxBoundaryValidator.validate"><code class="docutils literal notranslate"><span class="pre">MaxBoundaryValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.MinBoundaryValidator"><code class="docutils literal notranslate"><span class="pre">MinBoundaryValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.MinBoundaryValidator.validate"><code class="docutils literal notranslate"><span class="pre">MinBoundaryValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.RangeValidator"><code class="docutils literal notranslate"><span class="pre">RangeValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.RangeValidator.validate"><code class="docutils literal notranslate"><span class="pre">RangeValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.StringLengthValidator"><code class="docutils literal notranslate"><span class="pre">StringLengthValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.StringLengthValidator.validate"><code class="docutils literal notranslate"><span class="pre">StringLengthValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.TypeValidator"><code class="docutils literal notranslate"><span class="pre">TypeValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.TypeValidator.validate"><code class="docutils literal notranslate"><span class="pre">TypeValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.UniqueValidator"><code class="docutils literal notranslate"><span class="pre">UniqueValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.UniqueValidator.validate"><code class="docutils literal notranslate"><span class="pre">UniqueValidator.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.UrlValidator"><code class="docutils literal notranslate"><span class="pre">UrlValidator</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.UrlValidator.validate"><code class="docutils literal notranslate"><span class="pre">UrlValidator.validate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-PyAutoExcel.ParserInterface2">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">PyAutoExcel</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PyAutoExcel.ParserInterface2 package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/apidoc/PyAutoExcel.ParserInterface2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyautoexcel-parserinterface2-package">
+<h1>PyAutoExcel.ParserInterface2 package<a class="headerlink" href="#pyautoexcel-parserinterface2-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-PyAutoExcel.ParserInterface2.Field">
+<span id="pyautoexcel-parserinterface2-field-module"></span><h2>PyAutoExcel.ParserInterface2.Field module<a class="headerlink" href="#module-PyAutoExcel.ParserInterface2.Field" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Field.Field">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Field.</span></span><span class="sig-name descname"><span class="pre">Field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><span class="pre">BaseValidator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Field.Field" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a field in a form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the field.</p></li>
+<li><p><strong>validator</strong> – The validator for the field.</p></li>
+<li><p><strong>required</strong> – Whether the field is required.</p></li>
+<li><p><strong>default</strong> – The default value for the field.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Field.Field.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Field.Field.get" title="Link to this definition"></a></dt>
+<dd><p>Gets the value of the field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The value of the field.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Field.Field.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Field.Field.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Field.Field.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Field.Field.set" title="Link to this definition"></a></dt>
+<dd><p>Sets the value of the field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value to set.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValidationError</strong> – If the value is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Field.Field.validator">
+<span class="sig-name descname"><span class="pre">validator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><span class="pre">BaseValidator</span></a></em><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Field.Field.validator" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Field.Field.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Field.Field.value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-PyAutoExcel.ParserInterface2.Parser">
+<span id="pyautoexcel-parserinterface2-parser-module"></span><h2>PyAutoExcel.ParserInterface2.Parser module<a class="headerlink" href="#module-PyAutoExcel.ParserInterface2.Parser" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Parser.Parser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Parser.</span></span><span class="sig-name descname"><span class="pre">Parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Field.Field" title="PyAutoExcel.ParserInterface2.Field.Field"><span class="pre">Field</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Parser.Parser" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Parser class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> (<em>dict</em>) – dict of parameters.</p></li>
+<li><p><strong>target</strong> (<em>type</em>) – class of the object to be parsed.</p></li>
+<li><p><strong>fields</strong> (<em>list</em><em>[</em><a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.ParserInterface.Field" title="PyAutoExcel.ParserInterface.Field"><em>Field</em></a><em>]</em>) – list of fields to be parsed.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Parser.Parser.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Parser.Parser.parse" title="Link to this definition"></a></dt>
+<dd><p>Parse the parameters and return an instance of the target class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>instance of the target class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-PyAutoExcel.ParserInterface2.Validators">
+<span id="pyautoexcel-parserinterface2-validators-module"></span><h2>PyAutoExcel.ParserInterface2.Validators module<a class="headerlink" href="#module-PyAutoExcel.ParserInterface2.Validators" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.BaseValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">BaseValidator</span></span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Base class for validators.</p>
+<p>Subclasses should implement the <cite>validate</cite> method.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.BaseValidator.validate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.ConcatValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">ConcatValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">validators</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><span class="pre">BaseValidator</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.ConcatValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for concatenating multiple validators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>validators</strong> – The validators to concatenate.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.ConcatValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.ConcatValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.ContainsValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">ContainsValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allowed_values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.ContainsValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for checking a value contains a specific sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allowed_values</strong> (<em>list</em><em> | </em><em>tuple</em>) – The allowed values.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.ContainsValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.ContainsValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.CustomValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">CustomValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.CustomValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for custom validation logic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>[</em><em>Any</em><em>]</em><em>, </em><em>bool</em><em>]</em>) – The custom validation function.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.CustomValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.CustomValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.EmailValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">EmailValidator</span></span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.EmailValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for checking a value is a valid email address.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.EmailValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.EmailValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.MaxBoundaryValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">MaxBoundaryValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_boundary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.MaxBoundaryValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for checking a value is less than or equal to a maximum boundary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>max_boundary</strong> (<em>Number</em>) – The maximum boundary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.MaxBoundaryValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.MaxBoundaryValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.MinBoundaryValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">MinBoundaryValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_boundary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.MinBoundaryValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for checking a value is greater than or equal to a minimum boundary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>min_boundary</strong> (<em>Number</em>) – The minimum boundary.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.MinBoundaryValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.MinBoundaryValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.RangeValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">RangeValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.RangeValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for numeric ranges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_value</strong> (<em>int</em><em> | </em><em>float</em>) – The minimum value of the range.</p></li>
+<li><p><strong>max_value</strong> (<em>int</em><em> | </em><em>float</em>) – The maximum value of the range.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.RangeValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.RangeValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.StringLengthValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">StringLengthValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.StringLengthValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for string lengths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_length</strong> (<em>int</em>) – The minimum length of the string.</p></li>
+<li><p><strong>max_length</strong> (<em>int</em>) – The maximum length of the string.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.StringLengthValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.StringLengthValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.TypeValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">TypeValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">data_types</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.TypeValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for data types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data_types</strong> – The allowed data types.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.TypeValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.TypeValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.UniqueValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">UniqueValidator</span></span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.UniqueValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for checking a sequence of values are unique.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.UniqueValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">tuple</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">set</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">frozenset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.UniqueValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.UrlValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.ParserInterface2.Validators.</span></span><span class="sig-name descname"><span class="pre">UrlValidator</span></span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.UrlValidator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.ParserInterface2.Validators.BaseValidator" title="PyAutoExcel.ParserInterface2.Validators.BaseValidator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseValidator</span></code></a></p>
+<p>Validator for checking a value is a valid URL.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.ParserInterface2.Validators.UrlValidator.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.ParserInterface2.Validators.UrlValidator.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate the given data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data to validate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the data is invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-PyAutoExcel.ParserInterface2">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-PyAutoExcel.ParserInterface2" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, pystraf.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
