@@ -89,6 +89,9 @@ class CustomTableGenerator(BasicTableGenerator):
         self.table_option = table_option
         self.row_option = row_option
         self.cell_option = cell_option
+        self.content = (
+            "<!--generate by PyAutoExcel.TableGeneator.CustomTableGenerator-->\n"
+        )
 
     def start(self):
         """
