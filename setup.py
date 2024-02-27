@@ -26,7 +26,7 @@ setup(
               'PyAutoExcel.Documents.File.Excel', 'PyAutoExcel.Documents.File.Excel.Reader',
               'PyAutoExcel.Documents.File.Excel.Writer', 'PyAutoExcel.Documents.Workbook',
               'PyAutoExcel.Documents.Workbook.BookImpl', 'PyAutoExcel.TempFiles'],
-    url='',
+    url='https://github.com/pystraf/PyAutoExcel',
     install_requires=requires,
     extras_require={'pdf': ['pdfkit'], 'image': ['imgkit']},
     license='MIT',
