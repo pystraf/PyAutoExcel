@@ -31,13 +31,13 @@ from .ExtractVBA import extract_vba_project
 # HTML Exporter
 from .HTMLFile import HTMLSheet, save_html
 # HTML Table Generator
-from .TableGenerator import BasicTableGenerator as BasicHTMLTable
+from .TableGenerator import BasicTableGenerator as BasicHTMLTable, CustomTableGenerator as HTMLTable
 # XF Style API
 from .XFStyles import (XFAlignment, XFAlignmentConst, XFBorders,
                        XFBordersConst, XFFont, XFFontConst, XFPattern,
                        XFPatternConst, XFProtection, XFStyle)
 
-__version__ = "3.0.0"
+__version__ = "3.0.2"
 
 install_builtin_readers()
 install_builtin_writers()
