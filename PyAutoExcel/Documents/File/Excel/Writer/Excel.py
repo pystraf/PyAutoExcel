@@ -3,10 +3,8 @@ from typing import Type, Union
 
 import proglog
 
-from PyAutoExcel.BaseWriter import (ColumnDictGridWriteBook, ListGridWriteBook,
-                                    RecordGridWriteBook, WriteBook)
 from PyAutoExcel.Deprecated import process_deprecated as _process_deprecated
-
+from PyAutoExcel.Engines.WriterBase import BaseWriter
 from ..Reader.Excel import ExcelReader
 from ..Register import Register
 from ..Sheet import Sheet
@@ -14,7 +12,7 @@ from ..Sheet import Sheet
 writers = Register()
 
 
-def add_writer(engine: Type[WriteBook]):
+def add_writer(engine: Type[BaseWriter]):
     """
     Registers a new writer engine.
 
@@ -48,12 +46,7 @@ def install_builtin_writers():
 
     writers.add_from_module(
         module=Writers,
-        sub_class_filters=[
-            WriteBook,
-            ListGridWriteBook,
-            RecordGridWriteBook,
-            ColumnDictGridWriteBook,
-        ],
+        sub_class_filters=[BaseWriter],
         field_name="__engine__",
     )
 
@@ -77,15 +70,13 @@ class ExcelWriter:
     :param fmt: The format of the file (e.g., 'xls', 'xlsx'). Default to 'xlsx'.
     """
 
-    _engine: WriteBook
-    _sheets: list[Sheet]
+    _engine: BaseWriter
 
     def __init__(self, engine: str = "", fmt: str = "xlsx"):
         self._params = f"(engine={engine!r}, fmt={fmt!r})"
         engine = engine or auto_engine(fmt)
         self._engine = writers.get(engine)()
         _process_deprecated(self._engine.__deprecated__, engine)
-        self._sheets = []
 
     def add_sheet(self, s: Sheet, index: int = -1):
         """
@@ -98,9 +89,9 @@ class ExcelWriter:
         :type index: int
         """
         if index == -1:
-            self._sheets.append(s)
+            self._engine.sheets.append(s)
         else:
-            self._sheets.insert(index, s)
+            self._engine.sheets.insert(index, s)
 
     def get_sheet(self, name_or_idx: Union[int, str]):
         """
@@ -113,8 +104,8 @@ class ExcelWriter:
         :raises LookupError: If the sheet cannot be found.
         """
         if isinstance(name_or_idx, int):
-            return self._sheets[name_or_idx]
-        for s in self._sheets:
+            return self._engine.sheets[name_or_idx]
+        for s in self._engine.sheets:
             if s.name == name_or_idx:
                 return s
         raise LookupError(f"Cannot find sheet {name_or_idx!r}.")
@@ -127,7 +118,7 @@ class ExcelWriter:
         :return: A list of sheets.
         :rtype: list[Sheet]
         """
-        return self._sheets.copy()
+        return self._engine.sheets
 
     @property
     def sheet_names(self):
@@ -137,7 +128,7 @@ class ExcelWriter:
         :return: A list of sheet names.
         :rtype: list[str]
         """
-        return [s.name for s in self._sheets]
+        return [s.name for s in self._engine.sheets]
 
     def save(self, saver: Union[None, str, io.BytesIO] = None):
         """
@@ -149,22 +140,12 @@ class ExcelWriter:
         :return: If param 'saver' is None, return the content as bytes.
                  Otherwise, return None.
         """
-        self._update()
         logger = proglog.default_bar_logger("bar")
-        logger(message=f"PyAutoExcel - Writing {saver}.")
+        logger(message=f"PyAutoExcel - Writing {saver if saver is not None else 'into memory'}.")
         res = self._engine.save(saver)
         logger(message="PyAutoExcel - Done.")
         return res
 
-    def _update(self):
-        """
-        Updates the internal state before saving.
-        """
-        self._engine.sheets.clear()
-        self._engine.sheet_names.clear()
-        for s in self._sheets:
-            ws = self._engine.add_sheet(s.name)
-            s._dump(ws)
 
     @classmethod
     def from_reader(cls, reader: ExcelReader, use_engine: str = "", fmt: str = "xlsx"):
@@ -182,8 +163,7 @@ class ExcelWriter:
         :rtype: ExcelWriter
         """
         writer = cls(use_engine, fmt)
-        for s in reader.sheets():
-            writer.add_sheet(s)
+        writer._engine._sheets = reader._engine.sheets
         return writer
 
     def __repr__(self):

@@ -3,7 +3,7 @@ from typing import Type, Union
 
 import proglog
 
-from PyAutoExcel.BaseReader import ReadBook
+from PyAutoExcel.Engines.ReaderBase import BaseReader
 from PyAutoExcel.Deprecated import process_deprecated as _process_deprecated
 
 from ..Register import Register
@@ -12,7 +12,7 @@ from ..Sheet import Sheet
 readers = Register()
 
 
-def add_reader(engine: Type[ReadBook]):
+def add_reader(engine: Type[BaseReader]):
     """
     Registers a new reader engine.
 
@@ -46,7 +46,7 @@ def install_builtin_readers():
 
     readers.add_from_module(
         module=Readers,
-        sub_class_filters=[ReadBook],
+        sub_class_filters=[BaseReader],
         field_name="__engine__",
     )
 
@@ -72,7 +72,7 @@ class ExcelReader:
            If not specified, it is inferred from the file name.
     """
 
-    _engine: ReadBook
+    _engine: BaseReader
 
     def __init__(
         self,
@@ -92,13 +92,8 @@ class ExcelReader:
         logger(message=f"PyAutoExcel - Reading {file}.")
         self._engine = readers.get(engine)(file)
         _process_deprecated(self._engine.__deprecated__, engine)
-        self._sheets = []
-        self._sheets_dic = {}
-        for s in self._engine.sheets():
-            st = Sheet(s.name)
-            st._load(s)
-            self._sheets.append(st)
-            self._sheets_dic[s.name] = st
+        self._sheets = self._engine.sheets
+        self._sheet_names = self._engine.sheet_names
         logger(message="PyAutoExcel - Done.")
 
     def sheet_by_index(self, idx: int) -> Sheet:
@@ -106,7 +101,7 @@ class ExcelReader:
         Return a Sheet object for the sheet at the given index.
 
         :param idx: The index of the sheet (0-based).
-        :return: A ReadSheet object corresponding to the sheet at the given index.
+        :return: A Sheet object corresponding to the sheet at the given index.
         :rtype: Sheet
         :raise IndexError: If the index is out of range.
         """
@@ -119,22 +114,22 @@ class ExcelReader:
         Return a Sheet object for the sheet with the given name.
 
         :param name: The name of the sheet.
-        :return: A ReadSheet object corresponding to the sheet with the given name.
+        :return: A Sheet object corresponding to the sheet with the given name.
         :rtype: Sheet
         :raise KeyError: If no sheet with the given name exists.
         """
-        if name not in self._sheets_dic:
+        if name not in self._sheet_names:
             raise KeyError(f"No sheet named '{name}'.")
-        return self._sheets_dic[name]
+        return self._sheets[self._sheet_names.index(name)]
 
     def sheets(self):
         """
-        Return a list of ReadSheet objects for all sheets in the workbook.
+        Return a list of Sheet objects for all sheets in the workbook.
 
-        :return: A list of ReadSheet objects.
-        :rtype: list[ReadSheet]
+        :return: A list of Sheet objects.
+        :rtype: list[Sheet]
         """
-        return self._sheets.copy()
+        return self._sheets
 
     def nsheets(self):
         """
@@ -152,7 +147,7 @@ class ExcelReader:
         :return: A list of sheet names.
         :rtype: list[str]
         """
-        return list(self._sheets_dic.keys())
+        return self._sheet_names
 
     def __repr__(self):
         return (

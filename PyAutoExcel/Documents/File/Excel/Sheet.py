@@ -1,5 +1,4 @@
-from PyAutoExcel.BaseReader import ReadSheet
-from PyAutoExcel.BaseWriter import WriteSheet
+
 from PyAutoExcel.CellRange import CellRange
 from PyAutoExcel.Grid import ListGrid
 from PyAutoExcel.Utils import FinalMeta
@@ -142,25 +141,6 @@ class Sheet(metaclass=FinalMeta):
         """
         return len(self.data[0])
 
-    def _dump(self, s: WriteSheet):
-        """
-        Dumps the sheet data to a writer.
-
-        :param s: The writer to dump the data to.
-        :type s: WriteSheet
-        """
-        for i, row in enumerate(self.data):
-            s.write_row(i, row)
-
-    def _load(self, r: ReadSheet):
-        """
-        Loads the sheet data from a reader.
-
-        :param r: The reader to load the data from.
-        :type r: ReadSheet
-        """
-        for i, row in enumerate(r.data):
-            self.set_row(i, row)
 
     def __repr__(self):
         return f"PyAutoExcel.Documents.File.Excel.Sheet(name={self.name!r})"

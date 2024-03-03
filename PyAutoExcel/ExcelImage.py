@@ -45,7 +45,7 @@ def create_image_xls(file_name: str):
         fp.close()
         target_path = _get_name()
         fw = open(target_path, "w")
-        img.save(fw, "bmp")
+        img.save(fw)
         fw.close()
         return file_name
 
