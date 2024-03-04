@@ -9,8 +9,6 @@ import sys
 if sys.version_info < (3, 9, 0):
     raise RuntimeError("Sorry, Python 3.9.0 or later required.")
 
-# Inner Libraries Shortcuts
-from PyAutoExcel.Tiny.OpenSpreadSheetWriter import OpenSpreadSheetWriter
 
 # Migrate Bridge
 from .Bridge import migrate_style
