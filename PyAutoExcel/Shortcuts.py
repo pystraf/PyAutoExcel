@@ -1,8 +1,5 @@
-from typing import Optional
-
 import xlwt
 
-from .TableGenerator import BasicTableGenerator
 from .XFStyles import (XFAlignment, XFAlignmentConst, XFBorders,
                        XFBordersConst, XFFont, XFFontConst, XFPattern,
                        XFPatternConst, XFProtection, XFStyle)
@@ -90,5 +87,4 @@ def set_style(
     protection = XFProtection(cell_locked, formula_hidden)
     style = XFStyle(num_format_str, font, alignment, borders, pattern, protection)
     return style
-
 
