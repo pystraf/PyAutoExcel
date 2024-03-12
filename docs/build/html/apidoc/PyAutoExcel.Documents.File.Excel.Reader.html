@@ -136,10 +136,10 @@ If not specified, it is inferred from the file name.</p></li>
 <dd class="field-odd"><p><strong>idx</strong> – The index of the sheet (0-based).</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A ReadSheet object corresponding to the sheet at the given index.</p>
+<dd class="field-even"><p>A Sheet object corresponding to the sheet at the given index.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet">Sheet</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.Sheet" title="PyAutoExcel.Sheet">Sheet</a></p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>IndexError</strong> – If the index is out of range.</p>
@@ -156,10 +156,10 @@ If not specified, it is inferred from the file name.</p></li>
 <dd class="field-odd"><p><strong>name</strong> – The name of the sheet.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A ReadSheet object corresponding to the sheet with the given name.</p>
+<dd class="field-even"><p>A Sheet object corresponding to the sheet with the given name.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet">Sheet</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.Sheet" title="PyAutoExcel.Sheet">Sheet</a></p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>KeyError</strong> – If no sheet with the given name exists.</p>
@@ -184,13 +184,13 @@ If not specified, it is inferred from the file name.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="PyAutoExcel.Documents.File.Excel.Reader.Excel.ExcelReader.sheets">
 <span class="sig-name descname"><span class="pre">sheets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Documents.File.Excel.Reader.Excel.ExcelReader.sheets" title="Link to this definition"></a></dt>
-<dd><p>Return a list of ReadSheet objects for all sheets in the workbook.</p>
+<dd><p>Return a list of Sheet objects for all sheets in the workbook.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A list of ReadSheet objects.</p>
+<dd class="field-odd"><p>A list of Sheet objects.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[<a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseReader.ReadSheet" title="PyAutoExcel.BaseReader.ReadSheet">ReadSheet</a>]</p>
+<dd class="field-even"><p>list[<a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.Sheet" title="PyAutoExcel.Sheet">Sheet</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -199,7 +199,7 @@ If not specified, it is inferred from the file name.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="PyAutoExcel.Documents.File.Excel.Reader.Excel.add_reader">
-<span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Documents.File.Excel.Reader.Excel.</span></span><span class="sig-name descname"><span class="pre">add_reader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseReader.ReadBook" title="PyAutoExcel.BaseReader.ReadBook"><span class="pre">ReadBook</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Documents.File.Excel.Reader.Excel.add_reader" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Documents.File.Excel.Reader.Excel.</span></span><span class="sig-name descname"><span class="pre">add_reader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="PyAutoExcel.Engines.html#PyAutoExcel.Engines.BaseReader" title="PyAutoExcel.Engines.ReaderBase.BaseReader"><span class="pre">BaseReader</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Documents.File.Excel.Reader.Excel.add_reader" title="Link to this definition"></a></dt>
 <dd><p>Registers a new reader engine.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

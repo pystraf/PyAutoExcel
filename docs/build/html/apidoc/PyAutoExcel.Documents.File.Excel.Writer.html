@@ -119,7 +119,7 @@ If not specified, it is auto-detected based on the file format.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>s</strong> (<a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet"><em>Sheet</em></a>) – The sheet to add.</p></li>
+<li><p><strong>s</strong> (<a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.Sheet" title="PyAutoExcel.Sheet"><em>Sheet</em></a>) – The sheet to add.</p></li>
 <li><p><strong>index</strong> (<em>int</em>) – The index at which to insert the sheet.
 Defaults to -1, which appends the sheet.</p></li>
 </ul>
@@ -134,7 +134,7 @@ Defaults to -1, which appends the sheet.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reader</strong> (<a class="reference internal" href="PyAutoExcel.Documents.File.Excel.Reader.html#PyAutoExcel.Documents.File.Excel.Reader.Excel.ExcelReader" title="PyAutoExcel.Documents.File.Excel.Reader.Excel.ExcelReader"><em>ExcelReader</em></a>) – The ExcelReader to copy from.</p></li>
+<li><p><strong>reader</strong> (<a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.ExcelReader" title="PyAutoExcel.ExcelReader"><em>ExcelReader</em></a>) – The ExcelReader to copy from.</p></li>
 <li><p><strong>use_engine</strong> (<em>str</em>) – The engine to use for writing.</p></li>
 <li><p><strong>fmt</strong> (<em>str</em>) – The file format to use for writing.</p></li>
 </ul>
@@ -160,7 +160,7 @@ Defaults to -1, which appends the sheet.</p></li>
 <dd class="field-even"><p>The requested sheet.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet">Sheet</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.Sheet" title="PyAutoExcel.Sheet">Sheet</a></p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>LookupError</strong> – If the sheet cannot be found.</p>
@@ -207,7 +207,7 @@ Otherwise, return None.</p>
 <dd class="field-odd"><p>A list of sheets.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[<a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet">Sheet</a>]</p>
+<dd class="field-even"><p>list[<a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.Sheet" title="PyAutoExcel.Sheet">Sheet</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -216,7 +216,7 @@ Otherwise, return None.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="PyAutoExcel.Documents.File.Excel.Writer.Excel.add_writer">
-<span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Documents.File.Excel.Writer.Excel.</span></span><span class="sig-name descname"><span class="pre">add_writer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseWriter.WriteBook" title="PyAutoExcel.BaseWriter.WriteBook"><span class="pre">WriteBook</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Documents.File.Excel.Writer.Excel.add_writer" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Documents.File.Excel.Writer.Excel.</span></span><span class="sig-name descname"><span class="pre">add_writer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="PyAutoExcel.Engines.html#PyAutoExcel.Engines.BaseWriter" title="PyAutoExcel.Engines.WriterBase.BaseWriter"><span class="pre">BaseWriter</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Documents.File.Excel.Writer.Excel.add_writer" title="Link to this definition"></a></dt>
 <dd><p>Registers a new writer engine.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

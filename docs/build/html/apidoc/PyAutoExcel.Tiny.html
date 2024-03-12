@@ -46,43 +46,11 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">PyAutoExcel.Tiny package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-PyAutoExcel.Tiny.HtmlWriter">PyAutoExcel.Tiny.HtmlWriter module</a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter"><code class="docutils literal notranslate"><span class="pre">TBL_HTMLWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter.contents"><code class="docutils literal notranslate"><span class="pre">TBL_HTMLWriter.contents</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter.write"><code class="docutils literal notranslate"><span class="pre">TBL_HTMLWriter.write()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-PyAutoExcel.Tiny.ImageWriter">PyAutoExcel.Tiny.ImageWriter module</a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter"><code class="docutils literal notranslate"><span class="pre">IMGKIT_ImageWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.image_option"><code class="docutils literal notranslate"><span class="pre">IMGKIT_ImageWriter.image_option()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.table"><code class="docutils literal notranslate"><span class="pre">IMGKIT_ImageWriter.table()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.write"><code class="docutils literal notranslate"><span class="pre">IMGKIT_ImageWriter.write()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-PyAutoExcel.Tiny.OpenSpreadSheetWriter">PyAutoExcel.Tiny.OpenSpreadSheetWriter module</a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter"><code class="docutils literal notranslate"><span class="pre">OpenSpreadSheetWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.close"><code class="docutils literal notranslate"><span class="pre">OpenSpreadSheetWriter.close()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.create_sheet"><code class="docutils literal notranslate"><span class="pre">OpenSpreadSheetWriter.create_sheet()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.write"><code class="docutils literal notranslate"><span class="pre">OpenSpreadSheetWriter.write()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.write_row"><code class="docutils literal notranslate"><span class="pre">OpenSpreadSheetWriter.write_row()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-PyAutoExcel.Tiny.PdfWriter">PyAutoExcel.Tiny.PdfWriter module</a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter"><code class="docutils literal notranslate"><span class="pre">PDFKIT_PdfWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.pdf_option"><code class="docutils literal notranslate"><span class="pre">PDFKIT_PdfWriter.pdf_option()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.table"><code class="docutils literal notranslate"><span class="pre">PDFKIT_PdfWriter.table()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.write"><code class="docutils literal notranslate"><span class="pre">PDFKIT_PdfWriter.write()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-PyAutoExcel.Tiny">Module contents</a></li>
+<li><a class="reference internal" href="#pyautoexcel-tiny-htmlwriter-module">PyAutoExcel.Tiny.HtmlWriter module</a></li>
+<li><a class="reference internal" href="#pyautoexcel-tiny-imagewriter-module">PyAutoExcel.Tiny.ImageWriter module</a></li>
+<li><a class="reference internal" href="#pyautoexcel-tiny-openspreadsheetwriter-module">PyAutoExcel.Tiny.OpenSpreadSheetWriter module</a></li>
+<li><a class="reference internal" href="#pyautoexcel-tiny-pdfwriter-module">PyAutoExcel.Tiny.PdfWriter module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -116,261 +84,20 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="module-PyAutoExcel.Tiny.HtmlWriter">
-<span id="pyautoexcel-tiny-htmlwriter-module"></span><h2>PyAutoExcel.Tiny.HtmlWriter module<a class="headerlink" href="#module-PyAutoExcel.Tiny.HtmlWriter" title="Link to this heading"></a></h2>
-<p>Write table into .html files.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Tiny.HtmlWriter.</span></span><span class="sig-name descname"><span class="pre">TBL_HTMLWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">table_name:</span> <span class="pre">str,</span> <span class="pre">data:</span> <span class="pre">list[list],</span> <span class="pre">generator:</span> <span class="pre">type</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'PyAutoExcel.TableGenerator.BasicTableGenerator'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>This class represents a writer for generating HTML tables from data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table.</p></li>
-<li><p><strong>data</strong> (<em>list</em><em>[</em><em>list</em><em>]</em>) – The data to be written into the table.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter.contents">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">contents</span></span><a class="headerlink" href="#PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter.contents" title="Link to this definition"></a></dt>
-<dd><p>Get the HTML contents of the table.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The HTML contents of the table.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">FileIO</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.HtmlWriter.TBL_HTMLWriter.write" title="Link to this definition"></a></dt>
-<dd><p>Write the HTML contents of the table to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>io.FileIO</em><em>]</em>) – The file to write the HTML contents to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<section id="pyautoexcel-tiny-htmlwriter-module">
+<h2>PyAutoExcel.Tiny.HtmlWriter module<a class="headerlink" href="#pyautoexcel-tiny-htmlwriter-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-PyAutoExcel.Tiny.ImageWriter">
-<span id="pyautoexcel-tiny-imagewriter-module"></span><h2>PyAutoExcel.Tiny.ImageWriter module<a class="headerlink" href="#module-PyAutoExcel.Tiny.ImageWriter" title="Link to this heading"></a></h2>
-<p>Write table into pictures.
-Need ‘pdfkit’ and ‘wkhtmltox’ to run.</p>
-<dl class="field-list simple">
-<dt class="field-odd">raises ModuleNotFoundError<span class="colon">:</span></dt>
-<dd class="field-odd"><p>If ‘imgkit’ package or ‘wkhtmltox’ is not found.</p>
-</dd>
-</dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Tiny.ImageWriter.</span></span><span class="sig-name descname"><span class="pre">IMGKIT_ImageWriter</span></span><a class="headerlink" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Image writer class using imgkit to generate pictures.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>_options</strong> – Dictionary containing image generation options.</p></li>
-<li><p><strong>_html_content</strong> – HTML content to be converted to pictures.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.image_option">
-<span class="sig-name descname"><span class="pre">image_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opt_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.image_option" title="Link to this definition"></a></dt>
-<dd><p>Set a image generation option.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>opt_name</strong> (<em>str</em>) – The name of the option.</p></li>
-<li><p><strong>opt</strong> (<em>any</em>) – The value of the option.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>self</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.table">
-<span class="sig-name descname"><span class="pre">table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">data:</span> <span class="pre">list[list],</span> <span class="pre">html_generator:</span> <span class="pre">type</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'PyAutoExcel.TableGenerator.BasicTableGenerator'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.table" title="Link to this definition"></a></dt>
-<dd><p>Set up data tables.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The name of the table.</p></li>
-<li><p><strong>data</strong> (<em>list</em><em>[</em><em>list</em><em>]</em>) – The data to be displayed in the table.</p></li>
-<li><p><strong>html_generator</strong> (<em>type</em>) – The HTML generator class to be used.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>self</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.ImageWriter.IMGKIT_ImageWriter.write" title="Link to this definition"></a></dt>
-<dd><p>Write the table to an image file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>str</em>) – The path to save the image file.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<section id="pyautoexcel-tiny-imagewriter-module">
+<h2>PyAutoExcel.Tiny.ImageWriter module<a class="headerlink" href="#pyautoexcel-tiny-imagewriter-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-PyAutoExcel.Tiny.OpenSpreadSheetWriter">
-<span id="pyautoexcel-tiny-openspreadsheetwriter-module"></span><h2>PyAutoExcel.Tiny.OpenSpreadSheetWriter module<a class="headerlink" href="#module-PyAutoExcel.Tiny.OpenSpreadSheetWriter" title="Link to this heading"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Tiny.OpenSpreadSheetWriter.</span></span><span class="sig-name descname"><span class="pre">OpenSpreadSheetWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A class for writing data to an OpenDocument Spreadsheet (ODS) file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>file_name</strong> (<em>str</em>) – The name of the ODS file.</p></li>
-<li><p><strong>stream</strong> (<em>file-like object</em><em>, </em><em>optional</em>) – The stream to write to.
-If not provided, a file with the given name will be created, defaults to None.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.close">
-<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.close" title="Link to this definition"></a></dt>
-<dd><p>Closes the ODS file and the associated stream if it was created internally.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.create_sheet">
-<span class="sig-name descname"><span class="pre">create_sheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncolumns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.create_sheet" title="Link to this definition"></a></dt>
-<dd><p>Creates a new sheet in the ODS file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sheet_name</strong> (<em>str</em>) – The name of the new sheet.</p></li>
-<li><p><strong>ncolumns</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of columns in the new sheet, defaults to None.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.write" title="Link to this definition"></a></dt>
-<dd><p>Writes multiple rows of data to the specified sheet.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sheet_name</strong> (<em>str</em>) – The name of the sheet to write to.</p></li>
-<li><p><strong>data</strong> (<em>list</em><em>[</em><em>list</em><em>]</em>) – The data to write, where each element is a list representing a row.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.write_row">
-<span class="sig-name descname"><span class="pre">write_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sheet_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.OpenSpreadSheetWriter.OpenSpreadSheetWriter.write_row" title="Link to this definition"></a></dt>
-<dd><p>Writes a single row to the specified sheet.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sheet_name</strong> (<em>str</em>) – The name of the sheet to write to.</p></li>
-<li><p><strong>row</strong> (<em>list</em>) – The row data to write.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<section id="pyautoexcel-tiny-openspreadsheetwriter-module">
+<h2>PyAutoExcel.Tiny.OpenSpreadSheetWriter module<a class="headerlink" href="#pyautoexcel-tiny-openspreadsheetwriter-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-PyAutoExcel.Tiny.PdfWriter">
-<span id="pyautoexcel-tiny-pdfwriter-module"></span><h2>PyAutoExcel.Tiny.PdfWriter module<a class="headerlink" href="#module-PyAutoExcel.Tiny.PdfWriter" title="Link to this heading"></a></h2>
-<p>Write table into .pdf files.
-Need ‘pdfkit’ and ‘wkhtmltox’ to run.</p>
-<dl class="field-list simple">
-<dt class="field-odd">raises ModuleNotFoundError<span class="colon">:</span></dt>
-<dd class="field-odd"><p>If ‘pdfkit’ package or ‘wkhtmltox’ is not found.</p>
-</dd>
-</dl>
-<dl class="py class">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Tiny.PdfWriter.</span></span><span class="sig-name descname"><span class="pre">PDFKIT_PdfWriter</span></span><a class="headerlink" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>PDF writer class using pdfkit to generate PDF files.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>_options</strong> – Dictionary containing PDF generation options.</p></li>
-<li><p><strong>_html_content</strong> – HTML content to be converted to PDF.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.pdf_option">
-<span class="sig-name descname"><span class="pre">pdf_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">opt_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.pdf_option" title="Link to this definition"></a></dt>
-<dd><p>Set a PDF generation option.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>opt_name</strong> (<em>str</em>) – The name of the option.</p></li>
-<li><p><strong>opt</strong> (<em>any</em>) – The value of the option.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>self</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.table">
-<span class="sig-name descname"><span class="pre">table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">data:</span> <span class="pre">list[list],</span> <span class="pre">html_generator:</span> <span class="pre">type</span> <span class="pre">=</span> <span class="pre">&lt;class</span> <span class="pre">'PyAutoExcel.TableGenerator.BasicTableGenerator'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.table" title="Link to this definition"></a></dt>
-<dd><p>Set up data tables.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The name of the table.</p></li>
-<li><p><strong>data</strong> (<em>list</em><em>[</em><em>list</em><em>]</em>) – The data to be displayed in the table.</p></li>
-<li><p><strong>html_generator</strong> (<em>type</em>) – The HTML generator class to be used.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>self</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.write">
-<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Tiny.PdfWriter.PDFKIT_PdfWriter.write" title="Link to this definition"></a></dt>
-<dd><p>Write the table to a PDF file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>str</em>) – The path to save the PDF file.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<section id="pyautoexcel-tiny-pdfwriter-module">
+<h2>PyAutoExcel.Tiny.PdfWriter module<a class="headerlink" href="#pyautoexcel-tiny-pdfwriter-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-PyAutoExcel.Tiny">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-PyAutoExcel.Tiny" title="Link to this heading"></a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
 </section>
 </section>
 

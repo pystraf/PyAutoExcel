@@ -54,33 +54,29 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#module-PyAutoExcel.Engines.Writers">PyAutoExcel.Engines.Writers module</a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter"><code class="docutils literal notranslate"><span class="pre">OpenpyxlWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter.save_file"><code class="docutils literal notranslate"><span class="pre">OpenpyxlWriter.save_file()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter.save_io"><code class="docutils literal notranslate"><span class="pre">OpenpyxlWriter.save_io()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter"><code class="docutils literal notranslate"><span class="pre">OpenpyxlWriter</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter"><code class="docutils literal notranslate"><span class="pre">XlsxCessiveWriter</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxLiteWriter"><code class="docutils literal notranslate"><span class="pre">XlsxLiteWriter</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxWriterWriter"><code class="docutils literal notranslate"><span class="pre">XlsxWriterWriter</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlwtWriter"><code class="docutils literal notranslate"><span class="pre">XlwtWriter</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter"><code class="docutils literal notranslate"><span class="pre">XlsxCessiveWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter.save_file"><code class="docutils literal notranslate"><span class="pre">XlsxCessiveWriter.save_file()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter.save_io"><code class="docutils literal notranslate"><span class="pre">XlsxCessiveWriter.save_io()</span></code></a></li>
+<li><a class="reference internal" href="#module-PyAutoExcel.Engines">Module contents</a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseReader"><code class="docutils literal notranslate"><span class="pre">BaseReader</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseReader.nsheets"><code class="docutils literal notranslate"><span class="pre">BaseReader.nsheets</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseReader.sheet_by_index"><code class="docutils literal notranslate"><span class="pre">BaseReader.sheet_by_index()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseReader.sheet_by_name"><code class="docutils literal notranslate"><span class="pre">BaseReader.sheet_by_name()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseReader.sheet_names"><code class="docutils literal notranslate"><span class="pre">BaseReader.sheet_names</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseReader.sheets"><code class="docutils literal notranslate"><span class="pre">BaseReader.sheets</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxLiteWriter"><code class="docutils literal notranslate"><span class="pre">XlsxLiteWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxLiteWriter.save_file"><code class="docutils literal notranslate"><span class="pre">XlsxLiteWriter.save_file()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxWriter"><code class="docutils literal notranslate"><span class="pre">XlsxWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxWriter.save_file"><code class="docutils literal notranslate"><span class="pre">XlsxWriter.save_file()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlsxWriter.save_io"><code class="docutils literal notranslate"><span class="pre">XlsxWriter.save_io()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlwtWriter"><code class="docutils literal notranslate"><span class="pre">XlwtWriter</span></code></a><ul>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlwtWriter.save_file"><code class="docutils literal notranslate"><span class="pre">XlwtWriter.save_file()</span></code></a></li>
-<li><a class="reference internal" href="#PyAutoExcel.Engines.Writers.XlwtWriter.save_io"><code class="docutils literal notranslate"><span class="pre">XlwtWriter.save_io()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter"><code class="docutils literal notranslate"><span class="pre">BaseWriter</span></code></a><ul>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter.save"><code class="docutils literal notranslate"><span class="pre">BaseWriter.save()</span></code></a></li>
+<li><a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter.sheets"><code class="docutils literal notranslate"><span class="pre">BaseWriter.sheets</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-PyAutoExcel.Engines">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -119,25 +115,25 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Readers.OpenpyxlReader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Readers.</span></span><span class="sig-name descname"><span class="pre">OpenpyxlReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">IOBase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Readers.OpenpyxlReader" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseReader.ReadBook" title="PyAutoExcel.BaseReader.ReadBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadBook</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseReader" title="PyAutoExcel.Engines.ReaderBase.BaseReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseReader</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Readers.SxlReader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Readers.</span></span><span class="sig-name descname"><span class="pre">SxlReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">IOBase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Readers.SxlReader" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseReader.ReadBook" title="PyAutoExcel.BaseReader.ReadBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadBook</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseReader" title="PyAutoExcel.Engines.ReaderBase.BaseReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseReader</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Readers.XlrdReader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Readers.</span></span><span class="sig-name descname"><span class="pre">XlrdReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">IOBase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Readers.XlrdReader" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseReader.ReadBook" title="PyAutoExcel.BaseReader.ReadBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadBook</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseReader" title="PyAutoExcel.Engines.ReaderBase.BaseReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseReader</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Readers.XlsxioReader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Readers.</span></span><span class="sig-name descname"><span class="pre">XlsxioReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">IOBase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Readers.XlsxioReader" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseReader.ReadBook" title="PyAutoExcel.BaseReader.ReadBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadBook</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseReader" title="PyAutoExcel.Engines.ReaderBase.BaseReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseReader</span></code></a></p>
 </dd></dl>
 
 </section>
@@ -146,135 +142,140 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.OpenpyxlWriter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Writers.</span></span><span class="sig-name descname"><span class="pre">OpenpyxlWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseWriter.ListGridWriteBook" title="PyAutoExcel.BaseWriter.ListGridWriteBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListGridWriteBook</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.OpenpyxlWriter.save_file">
-<span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter.save_file" title="Link to this definition"></a></dt>
-<dd><p>Abstract method to save the workbook data to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file_name</strong> – The name of the file to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.OpenpyxlWriter.save_io">
-<span class="sig-name descname"><span class="pre">save_io</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.OpenpyxlWriter.save_io" title="Link to this definition"></a></dt>
-<dd><p>Save the workbook data to an IO stream.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> – The IO stream to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter" title="PyAutoExcel.Engines.WriterBase.BaseWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseWriter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxCessiveWriter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Writers.</span></span><span class="sig-name descname"><span class="pre">XlsxCessiveWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseWriter.WriteBook" title="PyAutoExcel.BaseWriter.WriteBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">WriteBook</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxCessiveWriter.save_file">
-<span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter.save_file" title="Link to this definition"></a></dt>
-<dd><p>Abstract method to save the workbook data to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file_name</strong> – The name of the file to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxCessiveWriter.save_io">
-<span class="sig-name descname"><span class="pre">save_io</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxCessiveWriter.save_io" title="Link to this definition"></a></dt>
-<dd><p>Save the workbook data to an IO stream.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> – The IO stream to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter" title="PyAutoExcel.Engines.WriterBase.BaseWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseWriter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxLiteWriter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Writers.</span></span><span class="sig-name descname"><span class="pre">XlsxLiteWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxLiteWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseWriter.ListGridWriteBook" title="PyAutoExcel.BaseWriter.ListGridWriteBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">ListGridWriteBook</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxLiteWriter.save_file">
-<span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxLiteWriter.save_file" title="Link to this definition"></a></dt>
-<dd><p>Abstract method to save the workbook data to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file_name</strong> – The name of the file to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter" title="PyAutoExcel.Engines.WriterBase.BaseWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseWriter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxWriter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Writers.</span></span><span class="sig-name descname"><span class="pre">XlsxWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseWriter.WriteBook" title="PyAutoExcel.BaseWriter.WriteBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">WriteBook</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxWriter.save_file">
-<span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxWriter.save_file" title="Link to this definition"></a></dt>
-<dd><p>Abstract method to save the workbook data to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file_name</strong> – The name of the file to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxWriter.save_io">
-<span class="sig-name descname"><span class="pre">save_io</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxWriter.save_io" title="Link to this definition"></a></dt>
-<dd><p>Save the workbook data to an IO stream.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> – The IO stream to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlsxWriterWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Writers.</span></span><span class="sig-name descname"><span class="pre">XlsxWriterWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlsxWriterWriter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter" title="PyAutoExcel.Engines.WriterBase.BaseWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseWriter</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlwtWriter">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.Writers.</span></span><span class="sig-name descname"><span class="pre">XlwtWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlwtWriter" title="Link to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="PyAutoExcel.html#PyAutoExcel.BaseWriter.WriteBook" title="PyAutoExcel.BaseWriter.WriteBook"><code class="xref py py-class docutils literal notranslate"><span class="pre">WriteBook</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlwtWriter.save_file">
-<span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlwtWriter.save_file" title="Link to this definition"></a></dt>
-<dd><p>Abstract method to save the workbook data to a file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file_name</strong> – The name of the file to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="PyAutoExcel.Engines.Writers.XlwtWriter.save_io">
-<span class="sig-name descname"><span class="pre">save_io</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.Writers.XlwtWriter.save_io" title="Link to this definition"></a></dt>
-<dd><p>Save the workbook data to an IO stream.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> – The IO stream to save the workbook data to.</p>
-</dd>
-</dl>
-</dd></dl>
-
+<dd><p>Bases: <a class="reference internal" href="#PyAutoExcel.Engines.BaseWriter" title="PyAutoExcel.Engines.WriterBase.BaseWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseWriter</span></code></a></p>
 </dd></dl>
 
 </section>
 <section id="module-PyAutoExcel.Engines">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-PyAutoExcel.Engines" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseReader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.</span></span><span class="sig-name descname"><span class="pre">BaseReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">IOBase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.BaseReader" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Base class for Excel readers.</p>
+<p>This class is abstract and should not be instantiated directly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> – The file to read.</p>
+</dd>
+</dl>
+<p>Subclasses must implement the following methods:</p>
+<ul class="simple">
+<li><p><cite>_setup()</cite>: Set up the reader.</p></li>
+<li><p><cite>_parse()</cite>: Read the sheets from the file.</p></li>
+</ul>
+<p>Subclasses must also set the following class variables:</p>
+<ul class="simple">
+<li><p><cite>__engine__</cite>: The name of the engine used by the reader.</p></li>
+</ul>
+<p>Subclasses may also set the following class variable:</p>
+<ul class="simple">
+<li><p><cite>__deprecated__</cite>: A DeprecatedInfo object containing information about the reader’s deprecation.</p></li>
+</ul>
+<dl class="py property">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseReader.nsheets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nsheets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#PyAutoExcel.Engines.BaseReader.nsheets" title="Link to this definition"></a></dt>
+<dd><p>Return the number of sheets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseReader.sheet_by_index">
+<span class="sig-name descname"><span class="pre">sheet_by_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.BaseReader.sheet_by_index" title="Link to this definition"></a></dt>
+<dd><p>Return the sheet at the given index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseReader.sheet_by_name">
+<span class="sig-name descname"><span class="pre">sheet_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyAutoExcel.Engines.BaseReader.sheet_by_name" title="Link to this definition"></a></dt>
+<dd><p>Return the sheet with the given name.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseReader.sheet_names">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sheet_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#PyAutoExcel.Engines.BaseReader.sheet_names" title="Link to this definition"></a></dt>
+<dd><p>Return the list of sheet names.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseReader.sheets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sheets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet"><span class="pre">Sheet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#PyAutoExcel.Engines.BaseReader.sheets" title="Link to this definition"></a></dt>
+<dd><p>Return the list of sheets.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyAutoExcel.Engines.</span></span><span class="sig-name descname"><span class="pre">BaseWriter</span></span><a class="headerlink" href="#PyAutoExcel.Engines.BaseWriter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Base class for Excel writers.</p>
+<p>Subclasses must implement the following methods:</p>
+<ul class="simple">
+<li><p><cite>_setup()</cite>: Set up the writer.</p></li>
+<li><p><cite>_write()</cite>: Writing data.</p></li>
+<li><p><cite>_output()</cite>: Export the file.</p></li>
+</ul>
+<p>Subclasses must also set the following class variables:</p>
+<ul class="simple">
+<li><p><cite>__engine__</cite>: The name of the engine used by the reader.</p></li>
+</ul>
+<p>Subclasses may also set the following class variable:</p>
+<ul class="simple">
+<li><p><cite>__deprecated__</cite>: A DeprecatedInfo object containing information about the reader’s deprecation.</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseWriter.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">IOBase</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#PyAutoExcel.Engines.BaseWriter.save" title="Link to this definition"></a></dt>
+<dd><p>Saves the Excel file to the specified location or stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>saver</strong> (<em>Union</em><em>[</em><em>None</em><em>, </em><em>str</em><em>, </em><em>io.BytesIO</em><em>]</em>) – The file path or stream to save to.
+If None, the file will be saved to memory.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If param ‘saver’ is None, return the content as bytes.
+Otherwise, return None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="PyAutoExcel.Engines.BaseWriter.sheets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sheets</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="PyAutoExcel.Documents.File.Excel.html#PyAutoExcel.Documents.File.Excel.Sheet.Sheet" title="PyAutoExcel.Documents.File.Excel.Sheet.Sheet"><span class="pre">Sheet</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#PyAutoExcel.Engines.BaseWriter.sheets" title="Link to this definition"></a></dt>
+<dd><p>Gets the list of sheets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of sheets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
